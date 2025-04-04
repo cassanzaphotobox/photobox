@@ -7,7 +7,9 @@
 </head>
 <body>
     <header>
-        <div class="logo">Photobox</div>
+        <div class="logo">
+            <img src="nailoong-icon.png" alt="Photobox">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Beranda</a></li>
@@ -15,38 +17,37 @@
                 <li><a href="#">Kontak</a></li>
             </ul>
         </nav>
-    </header><section class="photo-box">
-    <div class="camera-container">
-        <video id="video" autoplay></video>
-        <button id="capture">Tangkap Gambar</button>
+    </header><main>
+    <div class="container">
+        <video id="camera" autoplay></video>
         <canvas id="canvas"></canvas>
+        <button id="capture">Tangkap Gambar</button>
+        <button id="delete">Hapus Gambar</button>
+        <button id="resetFilter">Batalkan Filter</button>
+        <button id="download">Unduh</button>
+        
+        <div class="filters">
+            <button data-filter="none">Normal</button>
+            <button data-filter="grayscale">Hitam-Putih</button>
+            <button data-filter="sepia">Sepia</button>
+            <button data-filter="beauty">Percantik</button>
+            <button data-filter="glow">Glowing</button>
+        </div>
+        
+        <div class="background-options">
+            <label for="bgColor">Warna Background:</label>
+            <select id="bgColor">
+                <option value="white">Putih</option>
+                <option value="blue">Biru</option>
+                <option value="red">Merah</option>
+                <option value="green">Hijau</option>
+            </select>
+        </div>
     </div>
-</section>
-
-<section class="editor">
-    <h2>Edit Gambar</h2>
-    <button onclick="applyFilter('grayscale')">Hitam Putih</button>
-    <button onclick="applyFilter('sepia')">Sepia</button>
-    <button onclick="applyFilter('invert')">Invert</button>
-    <select id="size-selector">
-        <option value="small">Kecil</option>
-        <option value="medium">Sedang</option>
-        <option value="large">Besar</option>
-    </select>
-    <button id="apply-size">Terapkan Ukuran</button>
-</section>
-
-<section class="download-options">
-    <button id="download">Unduh Gambar</button>
-</section>
+</main>
 
 <footer>
-    <div class="social-media">
-        <a href="#">FB</a>
-        <a href="#">IG</a>
-        <a href="#">TW</a>
-    </div>
-    <p>Hak Cipta &copy; 2025</p>
+    <p>Ikuti kami di <i class="instagram-icon"></i> Instagram</p>
 </footer>
 
 <script src="script.js"></script>
