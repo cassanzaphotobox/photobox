@@ -12,7 +12,7 @@ nav ul li { margin: 0 15px; }
 
 nav ul li a { text-decoration: none; color: white; font-weight: bold; }
 
-.photo-box { margin: 20px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); width: 80%; }
+.photo-box { margin: 20px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); width: 90%; max-width: 600px; }
 
 .camera-container { position: relative; width: 100%; }
 
@@ -32,5 +32,13 @@ button:hover { background: #ff6f61; }
 
 select { padding: 5px; border-radius: 8px; border: 1px solid #ccc; }
 
+.social-media { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
+
+.social-media a { text-decoration: none; color: white; background: #ff6f61; padding: 10px; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
+
+.social-media a:hover { background: #ff3b2f; }
+
 footer { background: #ff6f61; color: white; padding: 10px; margin-top: 20px; }
+
+/* Responsiveness */ @media (max-width: 768px) { header { flex-direction: column; text-align: center; } nav ul { flex-direction: column; } .photo-box { width: 95%; } }
 
