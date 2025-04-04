@@ -1,38 +1,28 @@
-/* styles.css */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f8f9fa; }
 
-body { font-family: 'Poppins', sans-serif; background-image: url('nailoong-theme.jpg'); background-size: cover; background-position: center; text-align: center; padding: 0; margin: 0; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: linear-gradient(to right, #ff7eb3, #ff758c); color: white; }
 
-header { background: linear-gradient(to right, #ff9a9e, #fad0c4); padding: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+.logo { display: flex; align-items: center; }
 
-.logo { font-size: 24px; font-weight: bold; color: white; }
+.logo img { width: 50px; height: 50px; margin-right: 10px; }
 
-nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+nav ul { list-style: none; padding: 0; display: flex; }
 
 nav ul li { margin: 0 15px; }
 
-nav ul li a { text-decoration: none; color: white; font-weight: bold; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; }
 
-.photo-box { margin: 20px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); width: 90%; max-width: 600px; }
+.camera-section { margin-top: 20px; }
 
-.camera-container { position: relative; width: 100%; }
+video, canvas, img { width: 90%; max-width: 500px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
 
-video { width: 100%; border-radius: 12px; }
+button { background-color: #ff758c; color: white; border: none; padding: 10px 20px; margin-top: 10px; border-radius: 5px; cursor: pointer; font-size: 16px; }
 
-#capture { margin-top: 10px; background: #ff6f61; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+button:hover { background-color: #ff5a7a; }
 
-canvas { width: 100%; border-radius: 12px; margin-top: 20px; background: #ddd; }
+.editor-section { margin: 20px; }
 
-.editor, .download-options { margin-top: 20px; padding: 15px; background: #ffebcd; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+select { padding: 10px; margin: 10px; border-radius: 5px; border: 1px solid #ddd; }
 
-button { background: #ff9a9e; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; margin: 5px; }
-
-select { padding: 5px; border-radius: 8px; border: 1px solid #ccc; }
-
-.social-media { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
-
-.social-media a { text-decoration: none; color: white; background: #ff6f61; padding: 10px; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
-
-footer { background: #ff6f61; color: white; padding: 10px; margin-top: 20px; }
-
-/* Responsiveness */ @media (max-width: 768px) { header { flex-direction: column; text-align: center; } nav ul { flex-direction: column; } .photo-box { width: 95%; } }
+footer { margin-top: 30px; padding: 20px; background: #343a40; color: white; }
 
