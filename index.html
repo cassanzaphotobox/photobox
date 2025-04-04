@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobox</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">📷 Photobox</div>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header><main>
+    <section class="photo-box">
+        <div class="camera-container">
+            <video id="video" autoplay></video>
+            <button id="capture">📸 Tangkap Gambar</button>
+        </div>
+        <canvas id="canvas"></canvas>
+    </section>
+    
+    <section class="editor">
+        <h2>🎨 Edit Gambar</h2>
+        <button id="brightness">🔆 Kecerahan</button>
+        <button id="rotate">🔄 Putar</button>
+        <button id="crop">✂️ Potong</button>
+        <select id="filter">
+            <option value="none">🌈 Normal</option>
+            <option value="grayscale">⚫ Hitam-Putih</option>
+            <option value="sepia">📜 Sepia</option>
+        </select>
+    </section>
+    
+    <section class="download-options">
+        <h2>📥 Simpan Gambar</h2>
+        <label for="size">Ukuran:</label>
+        <select id="size">
+            <option value="small">Kecil</option>
+            <option value="medium">Sedang</option>
+            <option value="large">Besar</option>
+        </select>
+        <button id="download">⬇️ Unduh</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Photobox. Semua Hak Dilindungi.</p>
+    <div class="social-icons">
+        <a href="#">📘 Facebook</a>
+        <a href="#">🐦 Twitter</a>
+        <a href="#">📷 Instagram</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Menjalankan Kamera
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            document.getElementById('video').srcObject = stream;
+        })
+        .catch(err => console.error("Gagal mengakses kamera: ", err));
+
+    // Tangkap Gambar
+    document.getElementById('capture').addEventListener('click', () => {
+        let video = document.getElementById('video');
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    });
+
+    // Unduh Gambar
+    document.getElementById('download').addEventListener('click', () => {
+        let canvas = document.getElementById('canvas');
+        let link = document.createElement('a');
+        link.download = 'photobox_image.png';
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+</script>
+
+</body>
+</html>
