@@ -1,0 +1,36 @@
+/* styles.css */
+
+body { font-family: 'Poppins', sans-serif; background-color: #fcefee; text-align: center; padding: 0; margin: 0; }
+
+header { background: linear-gradient(to right, #ff9a9e, #fad0c4); padding: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+
+.logo { font-size: 24px; font-weight: bold; color: white; }
+
+nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a { text-decoration: none; color: white; font-weight: bold; }
+
+.photo-box { margin: 20px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); width: 80%; }
+
+.camera-container { position: relative; width: 100%; }
+
+video { width: 100%; border-radius: 12px; }
+
+#capture { margin-top: 10px; background: #ff6f61; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+
+#capture:hover { background: #ff3b2f; }
+
+canvas { width: 100%; border-radius: 12px; margin-top: 20px; background: #ddd; }
+
+.editor, .download-options { margin-top: 20px; padding: 15px; background: #ffebcd; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+
+button { background: #ff9a9e; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; margin: 5px; }
+
+button:hover { background: #ff6f61; }
+
+select { padding: 5px; border-radius: 8px; border: 1px solid #ccc; }
+
+footer { background: #ff6f61; color: white; padding: 10px; margin-top: 20px; }
+
